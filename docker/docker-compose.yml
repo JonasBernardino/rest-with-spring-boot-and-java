@@ -1,11 +1,14 @@
-version: "3.5"
-
+version: '3.1'
 services:
-
   db:
-    image: postgres:14.2-alpine
-    restart: always
+    image: mysql
+    container_name: mysql
     environment:
-      POSTGRES_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: root
     ports:
-      - "5432:5432"
+      - "3306:3306"
+    volumes:
+      - spring_data:/var/lib/mysql
+
+volumes:
+  spring_data:
