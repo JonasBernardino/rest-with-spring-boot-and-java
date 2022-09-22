@@ -1,4 +1,4 @@
-package br.com.jonas;
+package br.com.jonas.model;
 
 public class Greeting {
 
